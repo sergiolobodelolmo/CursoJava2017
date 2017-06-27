@@ -57,6 +57,7 @@ Problemas posibles de instalación:
 - No están los ejemplos -> se copia la carpeta en CATALINA_BASE/webapps
 Configuración -> CATALINA_HOME/conf
 - server.xml -> configuración del servidor
+	<Server> Vale para parar el servicio, con una palabra clave.
 	<Engine><Realm><Host name appBase (dir base) unpackWARs (autoinstalar WAR) autoDeploy (autopublicar)>
 
 
@@ -89,16 +90,40 @@ Lo desplegado está en "CATALINA_BASE/webapps".
 	Si copiamos un .war, trata de descomprimirlo y publicarlo. (Instalación "a mano").
 Podemos desplegar también a través de la propia herramienta de despliegue de Tom.
 
+Ejercicio: El cliente pone http://.../app/ListadoEmpleado y quiere recibir el listado de Empleados.
+El que lo recibe es un servlet(C). Servlet se lo pasa a un JSP(V). Servlet usará clases de java,
+(por ejemplo AccesoBD, los pojos Empleado.java y Departamento.java) para pedir a la base de datos los
+datos de los empleados, en un arraylist. El arraylist se lo pasa al JSP. El JSP crea un HTML enriquecido
+y se lo devuelve al servlet, que es quien se lo pasaría al cliente.
 
 CATALINA_BASE = directorio donde está instalado TomCat.
+__________________________________________________________________________________________________
+ECLIPSE
+
+Vinculamos Eclipse con TomCat. Eclipse se crea una instancia propia de configuración de tomcat.
+Tiene sus propios archivos y permite cambiarlos. Son dos instancias virtuales de tomcat. Por eso
+preferimos apagar el otro y controlarlo desde aquí. En realidad, es un clon del instalado en la 
+máquina.
+
+En WebContent: todo lo del proyecto que no sean .java.
+
+Código que empieza con @ -> pseudoinstrucciones.
+
 ---------------------------------------------------------------------------------------------------
-CONCEPTOS
+CONCEPTOS GENERALES DEL CURSO
 - FDBC es un API (conjunto de clases que trabajan en conjunto para hacer una tarea determinada). 
 Hibernate es un ORM (traductor POO-MR).
 - .war. Es como un .jar, pero para aplicación de servidor. Está comprimido. Si miramos dentro, 
 podemos var las .class (que son servlets compilados, ya en bytecode). Para ver el código java,
-necesitamos un DECOMPILADOR, que toma el .class y te da el .java.
+necesitamos un DECOMPILADOR (o javap), que toma el .class y te da el .java.
+- gestión de procesos en windows
+	- tasklist. es como ps.
+	- taskkill. es kill.
+	- sc. es como services.msc
+- XSTL. Hoja de transformaciones, que se aplican a otro documento de entrada. Es un XML que tiene
+instrucciones para transformar la entrada en otra salida. Puede generar varios formatos de salida.
+No es lo mismo que JSP.
 ___________________________________________________________________________________________________
-ENLACES
+ENLACES DEL CURSO
 * JSR - es el equivalente en java de un un RFC de redes. - https://jcp.org/en/jsr/all. Cada API tiene
 aquí un documento que las describe en profundidad. Aquí está toda la información PROFUNDA.
