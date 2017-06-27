@@ -1,16 +1,15 @@
 # CursoJava2017
 apuntes del curso de Java
 
-DIA1
+DIA1 - Cuestiones curso - VBOX
 -------------------------------------------------------------------------------------------
-Cuestiones curso - Director
+COMENTARIOS DEL DIRECTOR (entrega de la actividad didáctica).
 
-Entregar una actividad pedegógica con fecha tope 2 semanas después. 
-ORIGINAL
+Entregar una actividad pedegógica con fecha tope 2 semanas después. ORIGINAL. 
 Se pueden consultar las del año pasado en la biblioteca virtual, en el curso del año pasado.
-
 Entregar lo que sea necesario a través de la biblioteca virtual fp.
 ___________________________________________________________________________________________
+PLANTEAMIENTO
 - Planteamiento del temario 
 	Dejamos fuera GIT (a pesar de ello, hacer tarea) y Maven
 	Incluimos servidor, Hibernate (traductor POO-MR), Spring, servicios web.
@@ -41,6 +40,38 @@ VBOX
 	Cuidado con el Identificador (clonar máquinas, no copiar sin más) y la MAC.
 	archivo disco virtual: .vdi
 	archivo de configuración de virtualbox: .vbox -> puedo cambiarlo a mano
-	
-Comprobamos lo instalado. Ponemos apache y mysql como servicios. Instalamos Tomcat.
+___________________________________________________________________________________________
+INSTALACIONES
+Comprobamos lo instalado. 
+Ponemos apache y mysql como servicios. 
+Instalamos Tomcat con el instalador/wizard.
 
+
+DIA2 - TomCat - GIT
+-------------------------------------------------------------------------------------------
+__________________________________________________________________________________________
+TOMCAT
+
+Lo dejamos en manual para dejar que lo controle Eclipse.
+
+Servlet: Escucha una solicitud HTTP y genera una respuesta HTTP (HTML, json...).
+¿Cómo genero con un servlet un holamundo?. Con "echos". Para mejorarlo:
+JSP: tipo de programa que sirve para presentar salida a pantalla, generar HTML.
+
+MVC. "V" sería JSP. "C" serían los "servlets". "M" sería java sin más.
+
+TomCat es un entorno de ejecución de servlets. 
+Botones:
+	* Server Status (curso/curso). Administración.
+	* Manager App. Para gestionar las aplicaciones Java, los servlets. Vemos las aplicaciones
+	instaladas en el servidor. Podemos ver los ejemplos (examples)
+	
+Problemas posibles:
+* Autenticación -> ./conf/tomcat-users.xml. Se pone usuario/pass y roles que indican lo que puedo hacer.
+* No están los ejemplos -> se copia la carpeta en webapps
+
+Probamos con "/docs" y "/examples".
+
+Podemos tener algo instalado pero no desplegado. Lo desplegado está en "webapps". Si copiamos una
+nueva carpeta directamente en esta, es como si desplegáramos un nueva aplicación. Tomcat nos 
+permitirá arrancarlo.
