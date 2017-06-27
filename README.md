@@ -62,16 +62,28 @@ MVC. "V" sería JSP. "C" serían los "servlets". "M" sería java sin más.
 
 TomCat es un entorno de ejecución de servlets. 
 Botones:
-	* Server Status (curso/curso). Administración.
-	* Manager App. Para gestionar las aplicaciones Java, los servlets. Vemos las aplicaciones
+	- Server Status (curso/curso). Administración.
+	- Manager App. Para gestionar las aplicaciones Java, los servlets. Vemos las aplicaciones
 	instaladas en el servidor. Podemos ver los ejemplos (examples)
 	
 Problemas posibles:
-* Autenticación -> ./conf/tomcat-users.xml. Se pone usuario/pass y roles que indican lo que puedo hacer.
-* No están los ejemplos -> se copia la carpeta en webapps
+- Autenticación -> ./conf/tomcat-users.xml. Se pone usuario/pass y roles que indican lo que puedo hacer.
+- No están los ejemplos -> se copia la carpeta en webapps
 
-Probamos con "/docs" y "/examples".
+Probamos
+- "/docs" -> vemos la documentación de esta versión.
+- "/examples" -> ejemplos de servlets, jsp y websockets. se puede ver la ejecución y el código y se 
+puede aprender mucho.
 
 Podemos tener algo instalado pero no desplegado. Lo desplegado está en "webapps". Si copiamos una
 nueva carpeta directamente en esta, es como si desplegáramos un nueva aplicación. Tomcat nos 
 permitirá arrancarlo.
+
+FDBC es un API (conjunto de clases que trabajan en conjunto para hacer una tarea determinada). 
+Hibernate es un ORM (traductor POO-MR).
+
+---------------------------------------------------------------------------------------------------
+___________________________________________________________________________________________________
+ENLACES
+* JSR - es el equivalente en java de un un RFC de redes. - https://jcp.org/en/jsr/all. Cada API tiene
+aquí un documento que las describe en profundidad. Aquí está toda la información PROFUNDA.
