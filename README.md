@@ -49,13 +49,16 @@ Instalamos Tomcat con el instalador/wizard.
 
 DIA2 - TomCat - GIT
 -------------------------------------------------------------------------------------------
-__________________________________________________________________________________________
-TOMCAT
+TOMCAT (el gato Tom)
 
 Lo dejamos en manual para dejar que lo controle Eclipse.
 Problemas posibles de instalación:
-- Autenticación -> ./conf/tomcat-users.xml. Se pone usuario/pass y roles que indican lo que puedo hacer.
-- No están los ejemplos -> se copia la carpeta en webapps
+- Autenticación -> CATALINA_BASE/conf/tomcat-users.xml. Se pone usuario/pass y roles que indican lo que puedo hacer.
+- No están los ejemplos -> se copia la carpeta en CATALINA_BASE/webapps
+Configuración -> CATALINA_HOME/conf
+- server.xml -> configuración del servidor
+	<Engine><Realm><Host name appBase (dir base) unpackWARs (autoinstalar WAR) autoDeploy (autopublicar)>
+
 
 CONCEPTOS
 TomCat es un entorno de ejecución de servlets.
@@ -83,7 +86,8 @@ Probamos:
 	(estas "rutas" están mapeadas, no tienen por qué coincidir con carpetas reales)
 Lo desplegado está en "CATALINA_BASE/webapps". 
 	Si copiamos una nueva carpeta directamente en esta, es como si desplegáramos un nueva aplicación. 
-	Si copiamos un .war, trata de descomprimirlo y publicarlo. (Instalación "a mano")
+	Si copiamos un .war, trata de descomprimirlo y publicarlo. (Instalación "a mano").
+Podemos desplegar también a través de la propia herramienta de despliegue de Tom.
 
 
 CATALINA_BASE = directorio donde está instalado TomCat.
