@@ -53,36 +53,47 @@ ________________________________________________________________________________
 TOMCAT
 
 Lo dejamos en manual para dejar que lo controle Eclipse.
-
-Servlet: Escucha una solicitud HTTP y genera una respuesta HTTP (HTML, json...).
-¿Cómo genero con un servlet un holamundo?. Con "echos". Para mejorarlo:
-JSP: tipo de programa que sirve para presentar salida a pantalla, generar HTML.
-
-MVC. "V" sería JSP. "C" serían los "servlets". "M" sería java sin más.
-
-TomCat es un entorno de ejecución de servlets. 
-Botones:
-	- Server Status (curso/curso). Administración.
-	- Manager App. Para gestionar las aplicaciones Java, los servlets. Vemos las aplicaciones
-	instaladas en el servidor. Podemos ver los ejemplos (examples)
-	
-Problemas posibles:
+Problemas posibles de instalación:
 - Autenticación -> ./conf/tomcat-users.xml. Se pone usuario/pass y roles que indican lo que puedo hacer.
 - No están los ejemplos -> se copia la carpeta en webapps
 
-Probamos
-- "/docs" -> vemos la documentación de esta versión.
-- "/examples" -> ejemplos de servlets, jsp y websockets. se puede ver la ejecución y el código y se 
-puede aprender mucho.
+CONCEPTOS
+TomCat es un entorno de ejecución de servlets.
+Servlet: Escucha una solicitud HTTP y genera una respuesta HTTP (HTML, json...).
+	El código es más parecido a un java de toda la vida.
+	Crea un objeto respuesta y le mete dentro etiquetas HTML.
+¿Cómo genero con un servlet un holamundo?. Con "echos". Para mejorarlo:
+JSP: tipo de programa que sirve para presentar salida a pantalla, generar HTML.
+	El código es HTML enriquecido con etiquetas de JSP <% %>. 
 
-Podemos tener algo instalado pero no desplegado. Lo desplegado está en "webapps". Si copiamos una
-nueva carpeta directamente en esta, es como si desplegáramos un nueva aplicación. Tomcat nos 
-permitirá arrancarlo.
+MVC. "V" sería JSP. "C" serían los "servlets". "M" sería java sin más.
+	Lo ideal para hacer un "hola mundo", sería que servlet recoja la petición,
+	se lo pasa el JSP que genera la página y se la devuelve y luego el servlet
+	se la devuelve al cliente.
 
-FDBC es un API (conjunto de clases que trabajan en conjunto para hacer una tarea determinada). 
-Hibernate es un ORM (traductor POO-MR).
+USO 
+- Server Status (curso/curso). Administración.
+- Manager App. 
+Para gestionar las aplicaciones Java, los servlets. Vemos las aplicaciones instaladas en el servidor. 
+Tomcat nos  permitirá: arrancarlo, pararlo, replegarlo (desactivarlo y borrar la carpeta y el war si lo hay).
+Probamos:
+	- /docs. Documentación de esta versión.
+	- /examples. Ejemplos de servlets, jsp y websockets. 
+		Se puede ver la ejecución y el código y se puede aprender mucho.
+	(estas "rutas" están mapeadas, no tienen por qué coincidir con carpetas reales)
+Lo desplegado está en "CATALINA_BASE/webapps". 
+	Si copiamos una nueva carpeta directamente en esta, es como si desplegáramos un nueva aplicación. 
+	Si copiamos un .war, trata de descomprimirlo y publicarlo. (Instalación "a mano")
 
+
+CATALINA_BASE = directorio donde está instalado TomCat.
 ---------------------------------------------------------------------------------------------------
+CONCEPTOS
+- FDBC es un API (conjunto de clases que trabajan en conjunto para hacer una tarea determinada). 
+Hibernate es un ORM (traductor POO-MR).
+- .war. Es como un .jar, pero para aplicación de servidor. Está comprimido. Si miramos dentro, 
+podemos var las .class (que son servlets compilados, ya en bytecode). Para ver el código java,
+necesitamos un DECOMPILADOR, que toma el .class y te da el .java.
 ___________________________________________________________________________________________________
 ENLACES
 * JSR - es el equivalente en java de un un RFC de redes. - https://jcp.org/en/jsr/all. Cada API tiene
