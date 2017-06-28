@@ -198,6 +198,10 @@ siempre a la raíz.
 Otra cosa interesante a la hora de depurar un poco, es enviar cosas a la consola, 
 además de al flujo de salida.
 
+diferencia en un formulario
+- limpiar borra los valores.
+- reset lo deja como estaba la primera vez.
+
 
 
 
