@@ -181,7 +181,21 @@ te vuelves a conectar, el servidor te tiene fichado.
 Es texto. Todo lo que podamos meter en texto. Un objeto, por ejemplo.
 
 Se crea como si fuera un objeto con ciertos atributos. El mínimo es el nombre, pero puede 
-haber muchas más.
+haber muchas más. Se le puede asociar un valor hash al que entra y usar eso en nuestra
+bd para tener información de las preferencias de navegación o compra.
+
+Cookies de terceros. Un servidor me pone etiquetas y se las manda a otros servidores.
+(Ej: howsuffworks.com)
+
+Las cookies las establece el servidor en el response headers con setCookie. Después,
+al volver a entrar, las envía el cliente en request headers en cookies.
+
+Dentro de la cookie, se localiza primero el servidor. Luego se mira la ruta y si es / 
+se envía para todas las páginas de ese servidor. Si es, por ejemplo /primero, sólo se envían
+para los recursos en los que aparezca ese texto en la ruta. Simplificación: asociarlo
+siempre a la raíz.
+
+
 
 
 
@@ -209,7 +223,7 @@ ________________________________________________________________________________
 ENLACES DEL CURSO
 * JSR - es el equivalente en java de un un RFC de redes. - https://jcp.org/en/jsr/all. Cada API tiene
 aquí un documento que las describe en profundidad. Aquí está toda la información PROFUNDA.
-
+* Cosas de redes en inglés - http://howstuffworks.com
 ___________________________________________________________________________________________________
 IDEAS PEDAGÓGICAS
 * Hacer un documento colaborativo, de documentación. Suma de aportaciones. Trabajo que queda 
