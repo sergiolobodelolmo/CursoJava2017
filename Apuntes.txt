@@ -195,6 +195,8 @@ se envía para todas las páginas de ese servidor. Si es, por ejemplo /primero, 
 para los recursos en los que aparezca ese texto en la ruta. Simplificación: asociarlo
 siempre a la raíz.
 
+Otra cosa interesante a la hora de depurar un poco, es enviar cosas a la consola, 
+además de al flujo de salida.
 
 
 
