@@ -158,6 +158,31 @@ Tengo que ajustarlo a la infraestructura que tengo. Lo puedo cambiar en Properti
 	
 Repintado de datos del formulario -> no perderlos. Fundamental para no desanimarse.
 
+Usamos el ejemplo EnviaYRecibe
+Comentarios al respecto:
+
+___________________________________________________________________________________________
+MANTEMINIMIENTO DEL ESTADO - COOKIES
+
+¿Dónde se guardan? En el cliente.
+¿Quién hace que se guarden? El servidor.
+
+El cliente se conecta al servidor. El servidor envía las cookies. Cuando te sale el mensaje
+de si las quieres, ya las tienes contigo.
+
+Valen para guardar cosas en el cliente, cosas normalmente no muy importantes.
+Si son muy importantes, como el cliente puede desactivarlos, es posible que no funcione.
+El clientes las puede borrar, modificar, desactivar... Por eso no son muy seguras.
+
+¿Cómo funciona una cookie? Casi siempre tienen que ver con preferencias de navegación.
+La primera vez que las colocas, te las coloca el servidor. A partir de entonces, cuando 
+te vuelves a conectar, el servidor te tiene fichado.
+
+Es texto. Todo lo que podamos meter en texto. Un objeto, por ejemplo.
+
+Se crea como si fuera un objeto con ciertos atributos. El mínimo es el nombre, pero puede 
+haber muchas más.
+
 
 
 
