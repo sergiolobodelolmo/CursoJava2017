@@ -109,6 +109,13 @@ En WebContent: todo lo del proyecto que no sean .java.
 
 Código que empieza con @ -> pseudoinstrucciones.
 
+DIA3 - Eclipse/Tomcat
+-------------------------------------------------------------------------------------------
+TOMCAT en ECLIPSE
+
+Anotaciones -> valen para configurar. Se tiende a ir pasando a anotaciones las configuraciones de
+web.xml (descriptor de despliegue).
+
 ---------------------------------------------------------------------------------------------------
 CONCEPTOS GENERALES DEL CURSO
 - FDBC es un API (conjunto de clases que trabajan en conjunto para hacer una tarea determinada). 
