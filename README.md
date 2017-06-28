@@ -113,8 +113,58 @@ DIA3 - Eclipse/Tomcat
 -------------------------------------------------------------------------------------------
 TOMCAT en ECLIPSE
 
-Anotaciones -> valen para configurar. Se tiende a ir pasando a anotaciones las configuraciones de
-web.xml (descriptor de despliegue).
+Anotaciones -> valen para configurar. Hoy en día, la tendencia es ir pasando a anotaciones 
+las configuraciones de web.xml (descriptor de despliegue).
+
+Eclipse y Tomcat a veces no se sincronizan bien y pueden aparecer problemas.
+- Problemas al arrancar el servidor. 
+	Puede entrar en conflicto con la otra instancia de Tomcat.
+	Puede no reflejar bien la publicación de los proyectos.
+	Posibles soluciones:
+	- Rearrancar el servidor.
+	- Comprobar lo que tiene publicado. Suele dejar trozos de un proyecto al desplegarlo...
+		(Nos recomienda tener siempre abierta la carpeta donde está el proyecto en eclipse).
+		Para evitarlo, se puede usar la opción clean sobre el servidor.
+
+__________________________________________________________________________________________________
+DESARROLLO EN ENTORNO SERVIDOR
+
+Formularios
+Es muy habitual trabajar con formularios. Lo primero es asegurarnos de que los parámetros 
+llegan bien y se tratan bien.
+
+Ejemplo: alta en la web de GitHub.
+Primera petición (en el cliente): http://github.com. [SOLICITUD1]
+El servidor lo recibe y devuelve la página por defecto (index.hmtl). [RESPUESTA1]
+Supongamos que esa página es el formulario de alta, con campos y botones.
+El cliente lo rellena y clica "alta". [SOLICITUD2]
+El servidor recibe los valores. Eso no quiere decir que los datos estén bien. Aunque se pinte
+bien no quiere decir que se estén enviando bien los datos. Aquí se puede dedicar tiempo a repasar
+formularios y HTTP.
+	Posibles errores: de etiquetas, de atributos, de ... 
+Cuestiones varias de envío:
+	los text se envían siempre; los botones de radio, si no se pone ninguno, no se envía;...
+	(hay un pdf sobre este tema: dia2-3.envio de parametros).
+
+
+
+En la Vista Problems me muestra errores que están pendientes.
+Otra Vista disponible para ello es ErrorLog.
+
+Al traer otro proyecto de Eclipse, se da cuenta de que no tengo la misma infraestructura y se queja.
+Tengo que ajustarlo a la infraestructura que tengo. Lo puedo cambiar en Properties.
+	- Targeted Runtimes -> Los entornos de ejecución que tengo. Ahí indico la versión de Tomcat.
+	- Java Build Path 
+	
+Repintado de datos del formulario -> no perderlos. Fundamental para no desanimarse.
+
+
+
+
+
+
+
+
 
 ---------------------------------------------------------------------------------------------------
 CONCEPTOS GENERALES DEL CURSO
@@ -134,3 +184,10 @@ ________________________________________________________________________________
 ENLACES DEL CURSO
 * JSR - es el equivalente en java de un un RFC de redes. - https://jcp.org/en/jsr/all. Cada API tiene
 aquí un documento que las describe en profundidad. Aquí está toda la información PROFUNDA.
+
+___________________________________________________________________________________________________
+IDEAS PEDAGÓGICAS
+* Hacer un documento colaborativo, de documentación. Suma de aportaciones. Trabajo que queda 
+publicado con creativecommons.
+* Pasar los equipos a Linux.
+* Usar GitHub desde el principio del curso. Fomentar que los alumnos lo empleen.
