@@ -109,7 +109,7 @@ En WebContent: todo lo del proyecto que no sean .java.
 
 Código que empieza con @ -> pseudoinstrucciones.
 
-DIA3 - Eclipse/Tomcat
+DIA3 - Eclipse/Tomcat - COOKIES
 -------------------------------------------------------------------------------------------
 TOMCAT en ECLIPSE
 
@@ -203,6 +203,8 @@ diferencia en un formulario
 - reset lo deja como estaba la primera vez.
 
 
+DIA4 - 
+-------------------------------------------------------------------------------------------
 
 
 
