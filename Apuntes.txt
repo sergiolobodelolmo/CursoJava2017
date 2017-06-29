@@ -251,6 +251,37 @@ línea.
 dentro de .git, hay un archivo HEAD, que tiene "un puntero" al punto de desarrollo en el que 
 está el proyecto (el último commit).
 
+En el repositorio en github
+README.md -> comentario general explicando para qué es el proyecto.
+.gitignore -> lo que le decimos que ignore (a git). Como mínimo, las típicas librerías.
+licencia -> bajo qué licencia está.
+
+cuando hacemos un clon de un repositorio remoto, al original lo llama "origin". Crea dos "tubos"
+uno para subir y otro para bajar. el push es para subir del local al remoto y el fetch/pull para 
+bajar las modificaciones del remoto al local.
+
+versiones alternativas
+- con ramas, hay posibilidades alternativas, pero dentro de un mismo proyecto.
+- con fork. es una copia de un repositorio en mi cuenta remota.
+
+___________________________________________________________________________________________________
+GIT - GITHUB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---------------------------------------------------------------------------------------------------
 CONCEPTOS GENERALES DEL CURSO
@@ -279,3 +310,5 @@ publicado con creativecommons.
 * Pasar los equipos a Linux.
 * Usar GitHub desde el principio del curso. Fomentar que los alumnos lo empleen.
 jose.r.rodriguez.s@gmail.com
+
+idea tarea: dos alumnos que usen git y se pisen el código.
