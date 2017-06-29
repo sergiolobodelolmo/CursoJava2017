@@ -203,14 +203,53 @@ diferencia en un formulario
 - reset lo deja como estaba la primera vez.
 
 
-DIA4 - 
+DIA4 - LOCAL STORAGE - GIT - 
 -------------------------------------------------------------------------------------------
+LOCAL STORAGE (alternativa a cookies)
 
+En inspeccionar, chrome, Application, vemos Local Storage y Session Storage.
+Local Storage: bd en local de las visitas. Se manteniene aunque se cierre el navegador.
+Session Storage: bd en local de las sesiones. Se manteniene hasta que se cierra el navegador.
 
+Hay un ejercicio para ver esto (ContadorVisitasLocalStorage.html). En JavaScript.
 
+___________________________________________________________________________________________________
+GIT - GITHUB
 
+GitHub. Almacén de proyectos supervisadas por Git. Permite varias versiones del mismo proyecto
+(ramas). Se pueden crear, cerrar, fusionar...
 
+Cada proyecto, un repositorio. Se almacenan en GitHub, pero se suelen trabajar en local y 
+gestionar con un cliente GIT.
 
+Cliente GIT en línea de comandos. Vale para tener claro todo lo que hay que hacer (que se 
+suele esconder en los clientes integrados).
+Simula un linux sobre un windows (se ve fácil con pwd).
+
+Primer paso: ¿cómo sé que un proyecto está supervisado por GIT? GIT usa una estructura especial
+de metainformación para su repositorio.
+
+Si un archivo existe, pero no está "trackeado" es como si no existiera para git. Se denomina
+"Untracked". Un archivo de este tipo nunca será fotocopiado cuando guarde una instantánea del 
+proyecto. 
+
+Podemos pasar un archivo a estado "tracked" (supervisado). Entonces ya le incluye en su 
+supervisión y nos da información sobre él (git add ...). Confirmarlo es "hacerle una foto"
+(commit).
+
+git tiene configuración a tres niveles (git config):
+- para todos los usuarios del equipo. system.
+- para nivel de usuario. global. para mi usuario.
+- por repositorio. local.
+
+para sincronizar, se trae la copia central y trata de ajustarlo en local. una vez ajustado
+se puede subir al servidor (copia central).
+
+al hacer commit, te dice si ha cambiado archivos enteros y si ha escrito o borrado alguna
+línea.
+
+dentro de .git, hay un archivo HEAD, que tiene "un puntero" al punto de desarrollo en el que 
+está el proyecto (el último commit).
 
 
 ---------------------------------------------------------------------------------------------------
@@ -227,6 +266,7 @@ necesitamos un DECOMPILADOR (o javap), que toma el .class y te da el .java.
 - XSTL. Hoja de transformaciones, que se aplican a otro documento de entrada. Es un XML que tiene
 instrucciones para transformar la entrada en otra salida. Puede generar varios formatos de salida.
 No es lo mismo que JSP.
+- cheat sheet - chuleta con lo más importante comprimido y preparado para una hoja.
 ___________________________________________________________________________________________________
 ENLACES DEL CURSO
 * JSR - es el equivalente en java de un un RFC de redes. - https://jcp.org/en/jsr/all. Cada API tiene
@@ -238,3 +278,4 @@ IDEAS PEDAGÓGICAS
 publicado con creativecommons.
 * Pasar los equipos a Linux.
 * Usar GitHub desde el principio del curso. Fomentar que los alumnos lo empleen.
+jose.r.rodriguez.s@gmail.com
