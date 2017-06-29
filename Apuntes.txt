@@ -203,7 +203,7 @@ diferencia en un formulario
 - reset lo deja como estaba la primera vez.
 
 
-DIA4 - LOCAL STORAGE - GIT - 
+DIA4 - LOCAL STORAGE - GIT - SESIONES
 -------------------------------------------------------------------------------------------
 LOCAL STORAGE (alternativa a cookies)
 
@@ -265,8 +265,46 @@ versiones alternativas
 - con fork. es una copia de un repositorio en mi cuenta remota.
 
 ___________________________________________________________________________________________________
-GIT - GITHUB
+SESIONES 
 
+En HTTP no hay sesiones. Mantener el estado es mantener información de una conexión a la siguiente.
+Se soluciona con sesiones.
+
+Sesiones es información que los servlets escriben y guardan en algún sitio (memoria, disco...) de 
+una conexión a la siguiente. Se puede guardar dentro lo que queramos (testo, objetos...).
+
+Un uso común en la autenticación de correo sería tener una base de datos donde guarda los datos
+de los usuarios (como objetos, por ejemplo). Y guarda ese objeto usuario en la sesión. La sesión
+es como un saco donde se guarda esa información; que está en el servidor. Sería un arraylist o
+un mapa de String-Object. Cada entrada va a tener una etiqueta y un objeto, del tipo que sea.
+
+RegistroPorPasos
+Aquí el servlet es el C. el JSP es la V. y Datos.java es el M. (MVC)
+La barra de navegación permite navegar, pero no graba nada. Para grabar, botón grabar.
+En realidad lo hace pasando parámetros de un servlet al siguiente, para que los pueda 
+guardar el servidor en su sesión.
+
+JSP es una herramienta que genera HTML. Si le paso un literal, lo incluye. Si recibe un nombre, 
+tengo que pasárselo. Es un Pintador, de lo que le pasa el servlet. Para parárselo, se carga
+con más información la request. El servlet le va a pasar todo su contexto (incluyendo request y
+response) al JSP.
+Para ello se usa un RequestDispatcher, con el que se le pasa el control al JSP. En realidad, un
+JSP es un servlet (con su capa exterior de formateo de datos).
+Etiquetas:
+- <% código java sin más %>
+- <%= echo_del_valor_de_una_variable %>
+- <jsp:include > permite incluir código de jsp y pasar parámetros
+
+(los servlets están empezando a quedarse obsoletos. Ahora se recomienda la API MVC).
+
+Uso de las sesiones:  para una ejecución continua.
+
+La depuración de estos códigos es muy interesante.
+
+¿Cómo consigue la sesión saber que existe? Cuando me conecto por segunda vez, el navegador 
+sabe que existe la sesión. En realidad, se hace con una cookie, donde el servidor le pasa
+antes al cliente el identificador de la sesión. Y cuando vuelve, el cliente le pasa ese 
+valor de sesión al servidor.
 
 
 
@@ -298,6 +336,10 @@ necesitamos un DECOMPILADOR (o javap), que toma el .class y te da el .java.
 instrucciones para transformar la entrada en otra salida. Puede generar varios formatos de salida.
 No es lo mismo que JSP.
 - cheat sheet - chuleta con lo más importante comprimido y preparado para una hoja.
+- CSSSprite -> Un collage de imágenes que mi página va a usar. Así bajamos solo una imagen y 
+con CSS se selecciona lo que se muestra, con coordenadas.
+- CURL - cliente universal en linea de comandos. para cualquier servicio, crea solicitudes. es
+ideal para simular peticiones.
 ___________________________________________________________________________________________________
 ENLACES DEL CURSO
 * JSR - es el equivalente en java de un un RFC de redes. - https://jcp.org/en/jsr/all. Cada API tiene
